@@ -12,12 +12,13 @@
 </head>
 <header>
     <nav class="top_bar">
-        <p>Score | </p>
-        <p>Time : </p>
+        <p id="score">Score | </p>
+        <p id="time"> Time : </p>
     </nav>
 </header>
 <body>
     <main>
+        <Section class="Landing_page">
         <h1> Test Your General Knowledge. </h1>
         <p> The quiz will test you general Knowledge.<br> 
             You will have 1 min. and 20 sec.s to answer all questions.<br> 
@@ -26,8 +27,16 @@
             the quiz will end, when either the timer runs out or all questions has been answered (which-ever comes first.)
 
         </p>
-        <button id="start-btn" type="submit"> Start </button>
-        <button type="submit"> Highscores </button>
+        <button  class= "start-btns" id="start-btn" type="submit"> Start </button>
+        <button class= "start-btns" type="submit"> Highscores </button>
+        </Section>
+        <section class="question_container">
+            <h2 id="question">QUESTION : </h2>
+            <button class="answer"> Answer one</button>
+            <button class="answer"> Answer two</button>
+            <button class="answer"> Answer three</button>
+            <button class="answer"> Answer four</button>
+        </section>
     </main>
 </body>
 <script src="./Assets/script.js"> </script> 
