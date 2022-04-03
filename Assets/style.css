@@ -48,6 +48,12 @@ button:hover{
     visibility: hidden;
 
 }
+.end_page {
+    position:relative ;
+    margin: -400px 0px 0px 0px;
+    visibility: hidden;
+
+}
 .top_bar {
     display: flex;
     justify-content: space-between;    
