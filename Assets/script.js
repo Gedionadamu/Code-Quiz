@@ -83,37 +83,34 @@ var questions = [
 
 
 var start_btn = document.querySelector("#start-btn");
-var landing_page = document.querySelector(".Landing_page")
-var question_page = document.querySelector(".question_container")
-var timer = document.querySelector("#time")
-var question = document.querySelector("#question")
-var answer1 = document.querySelector(".answer1")
-var answer2 = document.querySelector(".answer2")
-var answer3 = document.querySelector(".answer3")
-var answer4 = document.querySelector(".answer4")
-var choices = document.querySelectorAll(".choices")
+var landing_page = document.querySelector(".Landing_page");
+var question_page = document.querySelector(".question_container");
+var timer = document.querySelector("#time");
+var question = document.querySelector("#question");
+var answers_ = Array.from(document.querySelectorAll(".answer"));
+
 
 // console.log(answer)
 // console.log(choices);
-console.log(typeof(questions.answer1));
+console.log(answers_);
 
 
-// function displayTimer(){
-//     timer.textContent = start_time;
-// }
+function displayTimer(){
+    timer.textContent = start_time;
+}
 
-// function startTime(){
-//     clearInterval();
-//     timerInterval = setInterval(function(){
-//     console.log(--start_time);
-//     if (start_time <= 0){
-//         clearInterval(timerInterval)
-//     }
-//     },1000);
+function startTime(){
+    clearInterval();
+    timerInterval = setInterval(function(){
+    console.log(--start_time);
+    if (start_time <= 0){
+        clearInterval(timerInterval)
+    }
+    },1000);
 
-//     displayTimer();
+    displayTimer();
 
-// }
+}
 function resetScore(){
     start_score = 0;
 }
@@ -121,10 +118,12 @@ var getRandomquestion = Math.floor(Math.random()* (questions.length));
 
 function startQuestion(){
     question.textContent = questions[getRandomquestion].question;
+    
    }
-function startAnswer(){
-   answer1.textContent = "hello";
-}
+
+answers_.forEach(answer=> {
+    answer.innerHTML = questions[getRandomquestion].answers[getRandomquestion].text;
+})
 start_btn.addEventListener("click",function(){
     landing_page.setAttribute("class","hidden");
     question_page.setAttribute("class","visible");
