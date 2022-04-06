@@ -49,7 +49,7 @@ button:hover{
 
 }
 .end_page {
-    position:relative ;
+    position:absolute ;
     margin: -400px 0px 0px 0px;
     visibility: hidden;
 
